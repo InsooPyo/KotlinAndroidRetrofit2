@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="icon_size">26dp</dimen>
+    <dimen name="padding_basic_margin">8dp</dimen>
+    <dimen name="basicMargin">16dp</dimen>
+    <dimen name="middleMargin">24dp</dimen>
+    <dimen name="yearMMdd">25dp</dimen>
+    <dimen name="layoutHeight">48dp</dimen>
+    <dimen name="layoutMargin">0dp</dimen>
+    <dimen name="innerTextSize">20sp</dimen>
+    <dimen name="temperatureFragmentTextSize">30dp</dimen>
+    <dimen name="progressbar_left_right_margin">32dp</dimen>
+    <dimen name="progressbar_textvew_margin">2dp</dimen>
+    <dimen name="progressbar_text_gap">20dp</dimen>
+    <dimen name="progressbar_size">90dp</dimen>
+    <dimen name="second_fragment_gap">25dp</dimen>
+    <dimen name="gridWeekTextSize">28dp</dimen>
+    <dimen name="subcityTempeSize">20dp</dimen>
+    <dimen name="bottomNoSubCityMessage">18dp</dimen>
+    <dimen name="bottomBtnTextSize">20dp</dimen>
+    <dimen name="default_foreground_stroke_width">7dp</dimen>
+    <dimen name="default_background_stroke_width">3dp</dimen>
+</resources>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_01">
+
+    <LinearLayout
+        android:id="@+id/main_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/basicMargin"
+        android:layout_marginTop="@dimen/middleMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTodayDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2017년 7월20일"
+            android:textColor="@color/weatherTextColor"
+            android:textSize="@dimen/yearMMdd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_today_hh_mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_top"
+        android:layout_marginLeft="@dimen/basicMargin"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTodayAmPm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Am"
+            android:textColor="@color/weatherTextColor"
+            android:textSize="@dimen/yearMMdd" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTodayHhMm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:55"
+            android:textColor="@color/weatherTextColor"
+            android:textSize="@dimen/yearMMdd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_weather_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_today_hh_mm"
+        android:layout_margin="30dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivCurrentWeatherIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_03" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTodayCurrentTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-30\u00B0"
+            android:textColor="@color/weatherTextColor"
+            android:textSize="@dimen/temperatureFragmentTextSize" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maxTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-10"
+                android:textColor="@color/weatherTextColor"
+                android:textSize="17dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/minTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textColor="@color/weatherTextColor"
+                android:textSize="17dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_batch"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/main_weather_icon"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <com.pyoinsoo.retrofit.kotlin.customwidget.CircularProgressBar
+                android:id="@+id/dustCircular"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_centerInParent="true"
+                custom:background_progressbar_width="15dp"
+                custom:foreground_progressbar_width="15dp"
+                custom:progress_value="70" />
+            />
+
+            <TextView
+                android:id="@+id/tvDustGrade"
+                style="@style/mainLivingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="매우\n높음"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                style="@style/mainLivingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dustCircular"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/progressbar_text_gap"
+                android:text="미세먼지" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <com.pyoinsoo.retrofit.kotlin.customwidget.CircularProgressBar
+                android:id="@+id/uvCircular"
+                android:layout_width="@dimen/progressbar_size"
+                android:layout_height="@dimen/progressbar_size"
+                android:layout_centerInParent="true"
+                custom:background_progressbar_width="15dp"
+                custom:foreground_progressbar_width="15dp"
+                custom:progress_value="70" />
+
+            <TextView
+                android:id="@+id/tvUvStateMessage"
+                style="@style/mainLivingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="매우\n낮음"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                style="@style/mainLivingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uvCircular"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/progressbar_text_gap"
+                android:text="자외선" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivCityLandmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/seoul" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#009bef</color>
+    <color name="weatherTextColor">#FFFFFF</color>
+    <color name="settingBackColor">#dddee0</color>
+    <color name="settingBackTextColor">#FF666C70</color>
+    <color name="settingRealColor">#009bef</color>
+    <color name="startDayNameColor">#efdf00</color>
+    <color name="activityMainSetting">#27A9E1</color>
+    <color name="bottomNoSubcityBGColor">#c2c4c9</color>
+    <color name="bottomBtnTextColor">#3259db</color>
+</resources>
